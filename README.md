@@ -6,7 +6,7 @@ Cairn is a Rust library and local CLI for retrieval engineers who need exact nea
 
 The accompanying Python workbench imports existing embeddings, audits fixed candidate budgets, compares saved ANN runs, and generates an interactive report. Everything runs locally; the optional Cohere adapter is the only component that calls a model API.
 
-**Status:** working engineering prototype. Exactness is relative to stored normalized float32 vectors and the documented float64 reference score. It is not a guarantee of semantic relevance. See [the algorithm and numerical contract](docs/DESIGN.md).
+**Status:** working engineering prototype. [Linux/macOS verification](docs/VERIFICATION.md). Exactness is relative to stored normalized float32 vectors and the documented float64 reference score. It is not a guarantee of semantic relevance. See [the algorithm and numerical contract](docs/DESIGN.md).
 
 [**Explore the measured demo**](https://balkashynov.github.io/cairn/) · [Algorithm](docs/DESIGN.md) · [Reproducible benchmarks](docs/BENCHMARKS.md)
 
@@ -17,6 +17,8 @@ On an Apple M3 Pro, Cairn matched all **2,124 / 2,124** benchmark top-10 ranking
 Requires Rust 1.93+ and Python 3.10+.
 
 ```bash
+git clone https://github.com/balkashynov/cairn.git
+cd cairn
 cargo build --release --locked
 python3 -m venv .venv
 . .venv/bin/activate
