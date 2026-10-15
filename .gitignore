@@ -1,0 +1,14 @@
+/target/
+/.venv/
+/data/
+__pycache__/
+.pytest_cache/
+*.cairn
+*.fbin
+.DS_Store
+
+/local-notes/
+/results/
+/build/
+/dist/
+*.egg-info/

@@ -1,0 +1,31 @@
+{
+  "dataset": "scifact",
+  "model": "embed-english-v3.0",
+  "revision": "f018922a46a51388348a307ec2fef28019a33026",
+  "source": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3",
+  "files": {
+    "corpus": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/scifact/corpus/0000.parquet",
+      "sha256": "512817f8a81248fa59b81a1abe1593f0581acb1be72b1222d59285566b703f6d",
+      "bytes": 14599289
+    },
+    "queries": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/scifact/queries/test.parquet",
+      "sha256": "50d16b71bdc5154647e73110c922d34883e762f7bc8f72a36ebbedfad5f5d7a1",
+      "bytes": 675502
+    },
+    "qrels": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/scifact/qrels/test.parquet",
+      "sha256": "6967ff3ea190591928137b98fd9605621b24646196e7c810221fe7de074262cb",
+      "bytes": 7357
+    }
+  },
+  "corpus": {
+    "rows": 5183,
+    "dimensions": 1024
+  },
+  "queries": {
+    "rows": 300,
+    "dimensions": 1024
+  }
+}

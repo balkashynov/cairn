@@ -1,0 +1,8 @@
+{
+  "source": "https://storage.googleapis.com/ann-filtered-benchmark/datasets/cohere-wiki-100k-no-filters.tgz",
+  "archive_sha256": "6fd59b125ff9326bab10d572c125a3ebbf79be16c74ed9163385fea4139446ae",
+  "rows": 99999,
+  "dimensions": 768,
+  "queries": 200,
+  "model": "historical Cohere Wikipedia embeddings; exact version not established by archive"
+}

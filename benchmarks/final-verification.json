@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-15T06:07:33.934517+00:00",
+  "purpose": "Recheck final binary after encapsulating validated index offsets; saved exhaustive results are reference. Not a timing rerun.",
+  "datasets": {
+    "cohere-wiki-100k": {
+      "ordered_ids_and_scores_match": 200
+    },
+    "cohere-wiki-1m": {
+      "ordered_ids_and_scores_match": 100
+    },
+    "cqadupstack-programmers": {
+      "ordered_ids_and_scores_match": 876
+    },
+    "fiqa": {
+      "ordered_ids_and_scores_match": 648
+    },
+    "scifact": {
+      "ordered_ids_and_scores_match": 300
+    }
+  },
+  "source_sha256": {
+    "src/kernel.rs": "3bd52eb16a2b47ce63903e364c6867ee1456c058557825a1f1350915c66b63ab",
+    "src/lib.rs": "0e07cefba23639c522122bdf2b76a6d40296048409bce0f3ace079310d896eed",
+    "src/main.rs": "86bfbf780ca385bc86855c1d3edf7bc5852ef5c58547a7cccbefde87537908bf",
+    "src/quantize.rs": "ab8c098951f41be1635a0a41bc7ae2b5bb5e93ffb1ed59802d259efebcfe0269",
+    "src/search.rs": "8004712496d34bc39e0385620e303106c86080948ba6a0feb7c8c94f837d80ef",
+    "src/storage.rs": "956086f3c0a6bb274553fb3da5cdc633716afa93f7d6a7d8b054d158cd285dc3"
+  },
+  "binary_sha256": "694f965354def768b2b6150cacc11e0e46b85a64389bef157a912e089f7630bf"
+}

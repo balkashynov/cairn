@@ -1,0 +1,726 @@
+{
+  "cohere-wiki-100k": {
+    "schema_version": 1,
+    "environment": {
+      "system": "macOS-27.0.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "python": "3.12.11"
+    },
+    "index": {
+      "layout": {
+        "rows": 99999,
+        "dimensions": 768,
+        "meta_offset": 256,
+        "codes_offset": 3200256,
+        "binary_offset": 79999488,
+        "vectors_offset": 89599424,
+        "file_bytes": 396796352
+      },
+      "format": "CAIRN001",
+      "kernel": "aarch64-neon-sdot",
+      "quantized_scan_bytes": 79999200,
+      "float_vector_bytes": 307196928,
+      "payload_sha256": "57cebac059d23c7fd65620766aa209e65bc0460922d4d3b27f3fdd2beba20dfa"
+    },
+    "protocol": {
+      "k": 10,
+      "queries": 200,
+      "repeats": 3,
+      "tag": null,
+      "cache": "warm; methods interleaved after warm-up",
+      "latency": "native search excludes JSON IPC; roundtrip includes Python and IPC",
+      "quality": "neighbor recall against stored normalized f32 exhaustive search; relevance nDCG separate",
+      "io": "logical vector bytes are not measured physical disk reads or resident memory"
+    },
+    "summary": {
+      "exhaustive": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 47.7199165,
+        "p95_ms": 50.64182645,
+        "p99_ms": 51.78009866,
+        "roundtrip_p50_ms": 48.00772900489392,
+        "mean_exact_vectors": 99999,
+        "mean_logical_float_bytes": 307196928,
+        "timed_samples": 600
+      },
+      "certified": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 2.659479,
+        "p95_ms": 3.3914586499999997,
+        "p99_ms": 3.7134544999999997,
+        "roundtrip_p50_ms": 2.938229496066924,
+        "mean_exact_vectors": 870.675,
+        "mean_logical_float_bytes": 2674713.6,
+        "timed_samples": 600
+      },
+      "binary_1x": {
+        "recall_at_k": 0.48,
+        "queries_with_misses": 200,
+        "p50_ms": 0.5266454999999999,
+        "p95_ms": 0.6029104000000001,
+        "p99_ms": 0.62492267,
+        "roundtrip_p50_ms": 0.7995834967005067,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 30720,
+        "timed_samples": 600
+      },
+      "binary_4x": {
+        "recall_at_k": 0.782,
+        "queries_with_misses": 157,
+        "p50_ms": 0.5556045000000001,
+        "p95_ms": 0.6372604,
+        "p99_ms": 0.6637887499999999,
+        "roundtrip_p50_ms": 0.8205624981201254,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 122880,
+        "timed_samples": 600
+      },
+      "binary_16x": {
+        "recall_at_k": 0.9390000000000001,
+        "queries_with_misses": 76,
+        "p50_ms": 0.6585835,
+        "p95_ms": 0.7418378,
+        "p99_ms": 0.7799088299999999,
+        "roundtrip_p50_ms": 0.9216664984705858,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 491520,
+        "timed_samples": 600
+      },
+      "int8_1x": {
+        "recall_at_k": 0.9535,
+        "queries_with_misses": 83,
+        "p50_ms": 1.7443335,
+        "p95_ms": 1.88688715,
+        "p99_ms": 2.31676125,
+        "roundtrip_p50_ms": 2.009353498579003,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 30720,
+        "timed_samples": 600
+      },
+      "int8_4x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 1.7707295,
+        "p95_ms": 1.92497645,
+        "p99_ms": 2.32660982,
+        "roundtrip_p50_ms": 2.036708996456582,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 122880,
+        "timed_samples": 600
+      },
+      "int8_16x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 1.8734164999999998,
+        "p95_ms": 2.01280415,
+        "p99_ms": 2.285533989999999,
+        "roundtrip_p50_ms": 2.1395625080913305,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 491520,
+        "timed_samples": 600
+      }
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "index": "IndexFlatIP",
+      "threads": 1,
+      "query_batch_size": 1,
+      "p50_ms": 4.968542001734022,
+      "p95_ms": 6.163385450054193,
+      "recall_at_k": 1.0,
+      "timed_samples": 600,
+      "all_queries_batch_total_ms": 36.22416600410361,
+      "all_queries_batch_per_query_ms": 0.18112083002051804,
+      "note": "FAISS accumulates f32; near ties can differ from Cairn f64. All original vectors resident. Separate timing pass."
+    },
+    "dataset": "Cohere Wikipedia 99,999 x 768",
+    "source_note": "Qdrant cohere-wiki-100k-no-filters benchmark. Historical Cohere Wikipedia embeddings; exact model version and query generation not established by the downloaded archive. Not Embed 5.",
+    "ordered_exact_queries": 200
+  },
+  "cohere-wiki-1m": {
+    "schema_version": 1,
+    "environment": {
+      "system": "macOS-27.0.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "python": "3.12.11"
+    },
+    "index": {
+      "layout": {
+        "rows": 999999,
+        "dimensions": 768,
+        "meta_offset": 256,
+        "codes_offset": 32000256,
+        "binary_offset": 799999488,
+        "vectors_offset": 895999424,
+        "file_bytes": 3967996352
+      },
+      "format": "CAIRN001",
+      "kernel": "aarch64-neon-sdot",
+      "quantized_scan_bytes": 799999200,
+      "float_vector_bytes": 3071996928,
+      "payload_sha256": "9a20ced2e4733beb7e7059942eb85cc5a066c787b632da6c0e300b9398d22e25"
+    },
+    "protocol": {
+      "k": 10,
+      "queries": 100,
+      "repeats": 3,
+      "tag": null,
+      "cache": "warm; methods interleaved after warm-up",
+      "latency": "native search excludes JSON IPC; roundtrip includes Python and IPC",
+      "quality": "neighbor recall against stored normalized f32 exhaustive search; relevance nDCG separate",
+      "io": "logical vector bytes are not measured physical disk reads or resident memory"
+    },
+    "summary": {
+      "exhaustive": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 500.66014600000005,
+        "p95_ms": 637.06722885,
+        "p99_ms": 1053.2724751699986,
+        "roundtrip_p50_ms": 501.088749995688,
+        "mean_exact_vectors": 999999,
+        "mean_logical_float_bytes": 3071996928,
+        "timed_samples": 300
+      },
+      "certified": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 23.2750835,
+        "p95_ms": 67.32671425000001,
+        "p99_ms": 198.64810716999952,
+        "roundtrip_p50_ms": 23.633666991372593,
+        "mean_exact_vectors": 1452.09,
+        "mean_logical_float_bytes": 4460820.48,
+        "timed_samples": 300
+      },
+      "binary_1x": {
+        "recall_at_k": 0.502,
+        "queries_with_misses": 99,
+        "p50_ms": 5.209375,
+        "p95_ms": 9.002528850000003,
+        "p99_ms": 20.70244449999995,
+        "roundtrip_p50_ms": 5.518229503650218,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 30720,
+        "timed_samples": 300
+      },
+      "binary_4x": {
+        "recall_at_k": 0.819,
+        "queries_with_misses": 73,
+        "p50_ms": 5.222958,
+        "p95_ms": 5.895566699999999,
+        "p99_ms": 8.13936875,
+        "roundtrip_p50_ms": 5.517792000318877,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 122880,
+        "timed_samples": 300
+      },
+      "binary_16x": {
+        "recall_at_k": 0.962,
+        "queries_with_misses": 26,
+        "p50_ms": 5.3696874999999995,
+        "p95_ms": 6.0408523999999995,
+        "p99_ms": 6.805987829999999,
+        "roundtrip_p50_ms": 5.667354002071079,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 491520,
+        "timed_samples": 300
+      },
+      "int8_1x": {
+        "recall_at_k": 0.9470000000000001,
+        "queries_with_misses": 46,
+        "p50_ms": 17.4994795,
+        "p95_ms": 20.4006569,
+        "p99_ms": 27.280179669999963,
+        "roundtrip_p50_ms": 17.825667004217394,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 30720,
+        "timed_samples": 300
+      },
+      "int8_4x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 17.501292,
+        "p95_ms": 20.404683650000003,
+        "p99_ms": 27.84414374999998,
+        "roundtrip_p50_ms": 17.818312997405883,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 122880,
+        "timed_samples": 300
+      },
+      "int8_16x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 17.660687,
+        "p95_ms": 20.211122300000007,
+        "p99_ms": 29.24627800999996,
+        "roundtrip_p50_ms": 17.980708507820964,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 491520,
+        "timed_samples": 300
+      }
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "index": "IndexFlatIP",
+      "threads": 1,
+      "query_batch_size": 1,
+      "p50_ms": 51.20939550397452,
+      "p95_ms": 67.15733684686711,
+      "recall_at_k": 1.0,
+      "timed_samples": 300,
+      "all_queries_batch_total_ms": 5206.487832998391,
+      "all_queries_batch_per_query_ms": 52.06487832998391,
+      "note": "FAISS accumulates f32; near ties can differ from Cairn f64. All original vectors resident. Separate timing pass."
+    },
+    "dataset": "Cohere Wikipedia 999,999 x 768",
+    "source_note": "Public Qdrant historical Cohere Wikipedia benchmark; exact model version and query construction not established by archive. Not an Embed 5 benchmark.",
+    "ordered_exact_queries": 100
+  },
+  "cqadupstack-programmers": {
+    "schema_version": 1,
+    "environment": {
+      "system": "macOS-27.0.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "python": "3.12.11"
+    },
+    "index": {
+      "layout": {
+        "rows": 32176,
+        "dimensions": 1024,
+        "meta_offset": 256,
+        "codes_offset": 1029888,
+        "binary_offset": 33978112,
+        "vectors_offset": 38096640,
+        "file_bytes": 169889536
+      },
+      "format": "CAIRN001",
+      "kernel": "aarch64-neon-sdot",
+      "quantized_scan_bytes": 33977856,
+      "float_vector_bytes": 131792896,
+      "payload_sha256": "18500c2947a1f410c955b29ab8b8b120a63738d5564c7c3a34514eb91edfe8d9"
+    },
+    "protocol": {
+      "k": 10,
+      "queries": 876,
+      "repeats": 3,
+      "tag": null,
+      "cache": "warm; methods interleaved after warm-up",
+      "latency": "native search excludes JSON IPC; roundtrip includes Python and IPC",
+      "quality": "neighbor recall against stored normalized f32 exhaustive search; relevance nDCG separate",
+      "io": "logical vector bytes are not measured physical disk reads or resident memory"
+    },
+    "summary": {
+      "exhaustive": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 21.0851665,
+        "p95_ms": 21.879595950000002,
+        "p99_ms": 22.84052609,
+        "roundtrip_p50_ms": 21.424562495667487,
+        "mean_exact_vectors": 32176,
+        "mean_logical_float_bytes": 131792896,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.4367522004665212
+      },
+      "certified": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 0.885708,
+        "p95_ms": 0.9783586500000001,
+        "p99_ms": 1.2194073200000002,
+        "roundtrip_p50_ms": 1.1981665011262521,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.4367522004665212
+      },
+      "binary_1x": {
+        "recall_at_k": 0.6215753424657534,
+        "queries_with_misses": 872,
+        "p50_ms": 0.187417,
+        "p95_ms": 0.20352665,
+        "p99_ms": 0.21787989,
+        "roundtrip_p50_ms": 0.5017090006731451,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 40960,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.42221829827036017
+      },
+      "binary_4x": {
+        "recall_at_k": 0.9087899543378996,
+        "queries_with_misses": 449,
+        "p50_ms": 0.21977049999999998,
+        "p95_ms": 0.23894395,
+        "p99_ms": 0.25721732,
+        "roundtrip_p50_ms": 0.5289999971864745,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.4348522033189904
+      },
+      "binary_16x": {
+        "recall_at_k": 0.9898401826484018,
+        "queries_with_misses": 69,
+        "p50_ms": 0.3455,
+        "p95_ms": 0.37634595,
+        "p99_ms": 0.40223618,
+        "roundtrip_p50_ms": 0.6552289996761829,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 655360,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.43670937991826503
+      },
+      "int8_1x": {
+        "recall_at_k": 0.9942922374429224,
+        "queries_with_misses": 50,
+        "p50_ms": 0.7452500000000001,
+        "p95_ms": 0.8146625000000001,
+        "p99_ms": 0.99749309,
+        "roundtrip_p50_ms": 1.0608954980853014,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 40960,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.4364222177880761
+      },
+      "int8_4x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 0.778917,
+        "p95_ms": 0.847625,
+        "p99_ms": 1.08611875,
+        "roundtrip_p50_ms": 1.095500003430061,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.4367522004665212
+      },
+      "int8_16x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 0.9089585,
+        "p95_ms": 0.9933879499999999,
+        "p99_ms": 1.1980536800000001,
+        "roundtrip_p50_ms": 1.2248749990249053,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 655360,
+        "timed_samples": 2628,
+        "ndcg_at_k": 0.4367522004665212
+      }
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "index": "IndexFlatIP",
+      "threads": 1,
+      "query_batch_size": 1,
+      "p50_ms": 2.031957992585376,
+      "p95_ms": 2.48473290266702,
+      "recall_at_k": 1.0,
+      "timed_samples": 2628,
+      "all_queries_batch_total_ms": 52.19337501330301,
+      "all_queries_batch_per_query_ms": 0.05958147832568837,
+      "note": "FAISS accumulates f32; near ties can differ from Cairn f64. All original vectors resident. Separate timing pass."
+    },
+    "dataset": "cqadupstack-programmers / Cohere embed-english-v3.0",
+    "source_note": "Public CohereLabs BEIR embeddings, revision f018922a46a51388348a307ec2fef28019a33026. Model: embed-english-v3.0. Relevance judgments and text belong to the original BEIR datasets. No live API or Embed 5 run is implied.",
+    "ordered_exact_queries": 876
+  },
+  "fiqa": {
+    "schema_version": 1,
+    "environment": {
+      "system": "macOS-27.0.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "python": "3.12.11"
+    },
+    "index": {
+      "layout": {
+        "rows": 57638,
+        "dimensions": 1024,
+        "meta_offset": 256,
+        "codes_offset": 1844672,
+        "binary_offset": 60865984,
+        "vectors_offset": 68243648,
+        "file_bytes": 304328896
+      },
+      "format": "CAIRN001",
+      "kernel": "aarch64-neon-sdot",
+      "quantized_scan_bytes": 60865728,
+      "float_vector_bytes": 236085248,
+      "payload_sha256": "5594350dd3e0d76dd882976b14b43268af8276c647f28e6da4ae80b79e970078"
+    },
+    "protocol": {
+      "k": 10,
+      "queries": 648,
+      "repeats": 3,
+      "tag": null,
+      "cache": "warm; methods interleaved after warm-up",
+      "latency": "native search excludes JSON IPC; roundtrip includes Python and IPC",
+      "quality": "neighbor recall against stored normalized f32 exhaustive search; relevance nDCG separate",
+      "io": "logical vector bytes are not measured physical disk reads or resident memory"
+    },
+    "summary": {
+      "exhaustive": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 37.8205415,
+        "p95_ms": 39.809831249999995,
+        "p99_ms": 40.92081362,
+        "roundtrip_p50_ms": 38.16606249893084,
+        "mean_exact_vectors": 57638,
+        "mean_logical_float_bytes": 236085248,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.42141156908982236
+      },
+      "certified": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 1.5578750000000001,
+        "p95_ms": 1.6814375,
+        "p99_ms": 1.984118,
+        "roundtrip_p50_ms": 1.8752920004772022,
+        "mean_exact_vectors": 40.032407407407405,
+        "mean_logical_float_bytes": 163972.74074074073,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.42141156908982236
+      },
+      "binary_1x": {
+        "recall_at_k": 0.6121913580246914,
+        "queries_with_misses": 646,
+        "p50_ms": 0.323959,
+        "p95_ms": 0.34902855000000005,
+        "p99_ms": 0.36976162,
+        "roundtrip_p50_ms": 0.642312501440756,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 40960,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.39229103009547733
+      },
+      "binary_4x": {
+        "recall_at_k": 0.9023148148148148,
+        "queries_with_misses": 354,
+        "p50_ms": 0.35825,
+        "p95_ms": 0.38698124999999994,
+        "p99_ms": 0.41144755999999977,
+        "roundtrip_p50_ms": 0.6689584988635033,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.4163460313135998
+      },
+      "binary_16x": {
+        "recall_at_k": 0.986574074074074,
+        "queries_with_misses": 67,
+        "p50_ms": 0.49237499999999995,
+        "p95_ms": 0.5298750499999999,
+        "p99_ms": 0.5807754999999999,
+        "roundtrip_p50_ms": 0.8004374976735562,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 655360,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.42044712913006077
+      },
+      "int8_1x": {
+        "recall_at_k": 0.9932098765432099,
+        "queries_with_misses": 44,
+        "p50_ms": 1.3226875,
+        "p95_ms": 1.42843385,
+        "p99_ms": 1.80803556,
+        "roundtrip_p50_ms": 1.6366249983548187,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 40960,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.4213763733612984
+      },
+      "int8_4x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 1.3578329999999998,
+        "p95_ms": 1.4708892999999998,
+        "p99_ms": 1.7718137499999997,
+        "roundtrip_p50_ms": 1.6734164964873344,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.42141156908982236
+      },
+      "int8_16x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 1.495271,
+        "p95_ms": 1.6269375,
+        "p99_ms": 1.9475905099999995,
+        "roundtrip_p50_ms": 1.8112085017492063,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 655360,
+        "timed_samples": 1944,
+        "ndcg_at_k": 0.42141156908982236
+      }
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "index": "IndexFlatIP",
+      "threads": 1,
+      "query_batch_size": 1,
+      "p50_ms": 3.7287084996933118,
+      "p95_ms": 4.475349949643714,
+      "recall_at_k": 1.0,
+      "timed_samples": 1944,
+      "all_queries_batch_total_ms": 70.96037500014063,
+      "all_queries_batch_per_query_ms": 0.1095067515434269,
+      "note": "FAISS accumulates f32; near ties can differ from Cairn f64. All original vectors resident. Separate timing pass."
+    },
+    "dataset": "fiqa / Cohere embed-english-v3.0",
+    "source_note": "Public CohereLabs BEIR embeddings, revision f018922a46a51388348a307ec2fef28019a33026. Model: embed-english-v3.0. Relevance judgments and text belong to the original BEIR datasets. No live API or Embed 5 run is implied.",
+    "ordered_exact_queries": 648
+  },
+  "scifact": {
+    "schema_version": 1,
+    "environment": {
+      "system": "macOS-27.0.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "python": "3.12.11"
+    },
+    "index": {
+      "layout": {
+        "rows": 5183,
+        "dimensions": 1024,
+        "meta_offset": 256,
+        "codes_offset": 166144,
+        "binary_offset": 5473536,
+        "vectors_offset": 6136960,
+        "file_bytes": 27366528
+      },
+      "format": "CAIRN001",
+      "kernel": "aarch64-neon-sdot",
+      "quantized_scan_bytes": 5473248,
+      "float_vector_bytes": 21229568,
+      "payload_sha256": "218428add489cf804bddd4bff945801067c48cc40a51f9c2f6e08e4e3c1f1fa4"
+    },
+    "protocol": {
+      "k": 10,
+      "queries": 300,
+      "repeats": 3,
+      "tag": null,
+      "cache": "warm; methods interleaved after warm-up",
+      "latency": "native search excludes JSON IPC; roundtrip includes Python and IPC",
+      "quality": "neighbor recall against stored normalized f32 exhaustive search; relevance nDCG separate",
+      "io": "logical vector bytes are not measured physical disk reads or resident memory"
+    },
+    "summary": {
+      "exhaustive": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 3.387167,
+        "p95_ms": 3.5501454999999997,
+        "p99_ms": 3.6925349999999995,
+        "roundtrip_p50_ms": 3.6960415018256754,
+        "mean_exact_vectors": 5183,
+        "mean_logical_float_bytes": 21229568,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7180585235230011
+      },
+      "certified": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 0.17375,
+        "p95_ms": 0.1958372,
+        "p99_ms": 0.21028249999999996,
+        "roundtrip_p50_ms": 0.46418750571319833,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7180585235230011
+      },
+      "binary_1x": {
+        "recall_at_k": 0.6336666666666667,
+        "queries_with_misses": 294,
+        "p50_ms": 0.040458,
+        "p95_ms": 0.046796149999999995,
+        "p99_ms": 0.05229308999999999,
+        "roundtrip_p50_ms": 0.32637450203765184,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 40960,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7017214926181509
+      },
+      "binary_4x": {
+        "recall_at_k": 0.9173333333333333,
+        "queries_with_misses": 145,
+        "p50_ms": 0.06916699999999999,
+        "p95_ms": 0.079,
+        "p99_ms": 0.08550667,
+        "roundtrip_p50_ms": 0.3580209959181957,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7176366680284646
+      },
+      "binary_16x": {
+        "recall_at_k": 0.9903333333333333,
+        "queries_with_misses": 25,
+        "p50_ms": 0.17504150000000002,
+        "p95_ms": 0.19546845,
+        "p99_ms": 0.2101695,
+        "roundtrip_p50_ms": 0.473000000056345,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 655360,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7180585235230011
+      },
+      "int8_1x": {
+        "recall_at_k": 0.9933333333333333,
+        "queries_with_misses": 20,
+        "p50_ms": 0.13318750000000001,
+        "p95_ms": 0.14372354999999998,
+        "p99_ms": 0.16088291,
+        "roundtrip_p50_ms": 0.4370004971860908,
+        "mean_exact_vectors": 10,
+        "mean_logical_float_bytes": 40960,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7180585235230011
+      },
+      "int8_4x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 0.1628545,
+        "p95_ms": 0.17568894999999995,
+        "p99_ms": 0.18439749999999996,
+        "roundtrip_p50_ms": 0.4651874987757765,
+        "mean_exact_vectors": 40,
+        "mean_logical_float_bytes": 163840,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7180585235230011
+      },
+      "int8_16x": {
+        "recall_at_k": 1.0,
+        "queries_with_misses": 0,
+        "p50_ms": 0.27575,
+        "p95_ms": 0.29696105,
+        "p99_ms": 0.31589875,
+        "roundtrip_p50_ms": 0.5796250043204054,
+        "mean_exact_vectors": 160,
+        "mean_logical_float_bytes": 655360,
+        "timed_samples": 900,
+        "ndcg_at_k": 0.7180585235230011
+      }
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "index": "IndexFlatIP",
+      "threads": 1,
+      "query_batch_size": 1,
+      "p50_ms": 0.3156454986310564,
+      "p95_ms": 0.3405482493690215,
+      "recall_at_k": 1.0,
+      "timed_samples": 900,
+      "all_queries_batch_total_ms": 6.983166997088119,
+      "all_queries_batch_per_query_ms": 0.023277223323627066,
+      "note": "FAISS accumulates f32; near ties can differ from Cairn f64. All original vectors resident. Separate timing pass."
+    },
+    "dataset": "scifact / Cohere embed-english-v3.0",
+    "source_note": "Public CohereLabs BEIR embeddings, revision f018922a46a51388348a307ec2fef28019a33026. Model: embed-english-v3.0. Relevance judgments and text belong to the original BEIR datasets. No live API or Embed 5 run is implied.",
+    "ordered_exact_queries": 300
+  }
+}

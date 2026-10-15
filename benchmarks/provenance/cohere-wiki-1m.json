@@ -1,0 +1,12 @@
+{
+  "source": "https://storage.googleapis.com/ann-filtered-benchmark/datasets/cohere-wiki-1m.tgz",
+  "rows": 999999,
+  "dimensions": 768,
+  "queries": 100,
+  "model": "historical Cohere Wikipedia vectors; exact model version/query construction not established by archive",
+  "sha256": {
+    "corpus.fbin": "6aa5bfdd4918ad35974a37ee6dd5a084251e2c96401118abb40408c425bd6711",
+    "queries.fbin": "788689c8032f5860c9747909bd5e2bdb06315d486e3496809a9231d3e0b3ba0e",
+    "tests.jsonl": "867e14c19dd23e452bbcf7b3ef6c914289d07f4bcdaba43bb17bf10f59041f4d"
+  }
+}

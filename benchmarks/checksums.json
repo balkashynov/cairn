@@ -1,0 +1,8 @@
+{
+  "benchmarks/numeric/cohere-wiki-100k.json.gz": "93bc681aacae26b1684df9434e0cb60f9acdf95ebd675ea320ee16066113218a",
+  "benchmarks/numeric/cohere-wiki-1m.json.gz": "b212c158a8bc4e7ba72ac9a58f559b6c3acd312f3fe1bd5e243cb7533d61c3a1",
+  "benchmarks/numeric/cqadupstack-programmers.json.gz": "885c09a3896ffc694d1f2a14de6a631212169e5dd5b6ec5d972995f80cb41cb0",
+  "benchmarks/numeric/fiqa.json.gz": "f7d383b22c8a42e05d886d74900f4b69ee05cdb77e5a42ad9428feecb41a3eb0",
+  "benchmarks/numeric/scifact.json.gz": "a80014d8c8b252a1c583e4b7a5690fd895fc68bfdc29e94a61aa8ac2e9d1bd5a",
+  "benchmarks/numeric/scifact-hnsw-integration.json.gz": "e71d2419a014db29f21e3a7cd5f0a74f104b1f5b5d2dd68781002ec50eb619c6"
+}

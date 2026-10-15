@@ -1,0 +1,31 @@
+{
+  "dataset": "fiqa",
+  "model": "embed-english-v3.0",
+  "revision": "f018922a46a51388348a307ec2fef28019a33026",
+  "source": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3",
+  "files": {
+    "corpus": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/fiqa/corpus/0000.parquet",
+      "sha256": "9b862c5f1d023435f71ebeb8f71942a8caf3b90b1b07b14b435e7a31623c2a52",
+      "bytes": 139524713
+    },
+    "queries": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/fiqa/queries/test.parquet",
+      "sha256": "d745fb2470b1d683c7897cef86b1f1ce73741332a9fb9426027556fa07e9d2fa",
+      "bytes": 1367236
+    },
+    "qrels": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/fiqa/qrels/test.parquet",
+      "sha256": "048ed9a71a0fbd6f9902355a610f97a314e66dc9bc3a97d8d2254019564d8218",
+      "bytes": 21439
+    }
+  },
+  "corpus": {
+    "rows": 57638,
+    "dimensions": 1024
+  },
+  "queries": {
+    "rows": 648,
+    "dimensions": 1024
+  }
+}

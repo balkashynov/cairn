@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-15T05:51:04.196402+00:00",
+  "rustc": "rustc 1.93.0 (254b59607 2026-01-19)",
+  "cpu": "Apple M3 Pro",
+  "memory_bytes": 19327352832,
+  "files": {
+    "Cargo.lock": "d7e4b2c85cfafc05b340a08604aec01b23a2d0a20033c5259002e6c3b7c21dcd",
+    "python/cairn_search/__init__.py": "f33f02bfec6cf5ca453dd22f0d9e344cbeaad58d70231e317a48514cc79cb7e6",
+    "python/cairn_search/__main__.py": "fd3ecacc13673797eeee1d479258a1ccd7b57002510e36167db341f68ae209a9",
+    "python/cairn_search/audit.py": "bdc687ae72176c405c0c7e7a9829f63164afba5cf619d6c4ddd99dc197888d3c",
+    "python/cairn_search/client.py": "6677fa3bfad9f7cd2649b0ff1c4e3e74bd2de1acd849e663f8d03755ef1e9eba",
+    "python/cairn_search/cohere.py": "8b5a76efc5f7179231e2f5bc746fab7311190879addcc8ed48b6681bf3c89e79",
+    "python/cairn_search/compare.py": "a0894df04fdd393c125c3cf5ec50a24e27e0dbb664f381cca437f3334a4eb4f7",
+    "python/cairn_search/report.html": "7c6153f3146cff97ef3f92cbc95f3872eb0c5e1684df04133e237622bcbb8076",
+    "python/cairn_search/report.py": "be87bcb02b5e7ef000794912cbe828dcecf3f0df631bb515a4cc0629c89ed56d",
+    "src/kernel.rs": "3bd52eb16a2b47ce63903e364c6867ee1456c058557825a1f1350915c66b63ab",
+    "src/lib.rs": "0e07cefba23639c522122bdf2b76a6d40296048409bce0f3ace079310d896eed",
+    "src/main.rs": "cfdb596094eec75e0e8efc26a87f5826eec4fd5ab9e668e4d00ccbf79325cb7a",
+    "src/quantize.rs": "ab8c098951f41be1635a0a41bc7ae2b5bb5e93ffb1ed59802d259efebcfe0269",
+    "src/search.rs": "8004712496d34bc39e0385620e303106c86080948ba6a0feb7c8c94f837d80ef",
+    "src/storage.rs": "fc8f9c2c909eeb0b7f7957d36c1336af52583c79be95006e7902d88e512e19a6"
+  }
+}

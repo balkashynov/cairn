@@ -1,0 +1,31 @@
+{
+  "dataset": "cqadupstack-programmers",
+  "model": "embed-english-v3.0",
+  "revision": "f018922a46a51388348a307ec2fef28019a33026",
+  "source": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3",
+  "files": {
+    "corpus": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/cqadupstack-programmers/corpus/0000.parquet",
+      "sha256": "2fd50fa877b650afc3dd8d24b6d482d0e148b4af91c0348fb76a7bcf4d10b638",
+      "bytes": 82672698
+    },
+    "queries": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/cqadupstack-programmers/queries/test.parquet",
+      "sha256": "4717085c60038337d151d1ecd465ac94b156c54c788fc8e4530ff5b4a9463991",
+      "bytes": 1815877
+    },
+    "qrels": {
+      "url": "https://huggingface.co/datasets/CohereLabs/beir-embed-english-v3/resolve/f018922a46a51388348a307ec2fef28019a33026/cqadupstack-programmers/qrels/test.parquet",
+      "sha256": "2d60e8ef6bc52f4409b4af1937e3ea45970a08cf510bb1fd2c6af828542e912a",
+      "bytes": 22878
+    }
+  },
+  "corpus": {
+    "rows": 32176,
+    "dimensions": 1024
+  },
+  "queries": {
+    "rows": 876,
+    "dimensions": 1024
+  }
+}
