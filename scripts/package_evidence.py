@@ -79,14 +79,19 @@ for path in sorted(args.results.glob("*.json")):
             "Claims: CC BY 4.0. Abstract excerpts: S2ORC, ODC-By 1.0. "
             "Excerpts are shortened; original source IDs are shown."
         )
-        write_report(demo, "demo/index.html")
+        # Keep the presentation separate from the generated full audit report.
+        write_report(demo, "demo/audit.html")
+        Path("demo/scifact.json").write_text(
+            json.dumps(demo, separators=(",", ":"), ensure_ascii=False) + "\n"
+        )
         Path("demo/.nojekyll").touch()
 
 for path in args.results.glob("memory-*.txt"):
     shutil.copyfile(path, destination / path.name)
 (destination / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+Path("demo/benchmarks.json").write_text(json.dumps(summary, indent=2) + "\n")
 # Include separately recorded integrations already in the evidence directory.
 for path in sorted((destination / "numeric").glob("*.json.gz")):
     checksums[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
 (destination / "checksums.json").write_text(json.dumps(checksums, indent=2) + "\n")
-print(f"Packaged {len(summary)} datasets, numeric results and demo/index.html")
+print(f"Packaged {len(summary)} datasets, numeric results and demo/audit.html")
